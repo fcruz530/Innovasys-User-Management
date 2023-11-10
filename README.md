@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="src/assets/loginPage.png" alt="Logo" width="80" height="80">
+<img src="src/assets/loginPage.png" alt="Logo" width="500" height="500">
 
 This project is an assesment and was developed as part of an application process with a software consulting services company
 called InnovaSyst, wich is a company based in PR. 
@@ -110,3 +110,6 @@ Felix J. Cruz Ortiz - javi78001@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
