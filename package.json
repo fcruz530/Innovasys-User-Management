@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-prod":"ng build --configuration production --base-href \"https://fcruz530.github.io/Innovasys-User-Management/\""
+    "build-prod":"ng build --configuration production --base-href \"https://fcruz530.github.io/Innovasys-User-Management/\"",
+    "deploy-gh": "npx angular-cli-ghpages --dir=docs/"
   },
   "private": true,
   "dependencies": {
