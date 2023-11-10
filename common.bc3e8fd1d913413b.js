@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinnovasyst_user_management=self.webpackChunkinnovasyst_user_management||[]).push([[592],{6385:(c,n,r)=>{r.d(n,{t:()=>o});var a=r(5879),d=r(3680);let o=(()=>{class t{static#t=this.\u0275fac=function(e){return new(e||t)};static#i=this.\u0275mod=a.oAB({type:t});static#e=this.\u0275inj=a.cJS({imports:[d.BQ,d.BQ]})}return t})()}}]);
