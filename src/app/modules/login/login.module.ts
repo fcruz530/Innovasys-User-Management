@@ -7,6 +7,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from "./login.component";
 import { NgModule } from "@angular/core";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -19,6 +22,9 @@ import { NgModule } from "@angular/core";
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   declarations: [LoginComponent],
 })

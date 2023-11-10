@@ -1,1 +1,77 @@
-<p>user-edit works!</p>
+<!-- BODY -->
+<div class="p-4 flex flex-col w-full">
+
+  <!-- BACK BUTTON -->
+  <div class="flex-row">
+    <button mat-raised-button color="primary" routerLink="../../" class="mb-4">
+      Back to users
+    </button>
+  </div>
+
+  <!-- / BACK BUTTON -->
+
+  <!-- USER INFORMATION -->
+  <form [formGroup]="usersFormGroup" (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-card-header class="mb-4">
+        <mat-card-title> {{ !id ? 'Add New User' : 'Edit User' }} </mat-card-title>
+      </mat-card-header>
+
+      <!-- FORM -->
+      <mat-card-content>
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+
+          <!-- NAME -->
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Enter name" required />
+            <mat-error *ngIf="usersFormGroup.controls.name.errors?.required">Field is required</mat-error>
+          </mat-form-field>
+          <!-- / NAME -->
+
+          <!-- EMAIL -->
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Enter email" required />
+            <mat-error *ngIf="usersFormGroup.controls.email.errors?.required">Field is required</mat-error>
+            <mat-error *ngIf="usersFormGroup.controls.email.errors?.email">Incorrect email format</mat-error>
+          </mat-form-field>
+          <!-- / EMAIL -->
+
+          <!-- STATUS -->
+          <mat-form-field>
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+              <mat-option *ngFor="let status of statuses" [value]="status">{{ status | titlecase }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- / STATUS -->
+
+          <!-- GENDER -->
+          <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender">{{ gender | titlecase }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- / GENDER -->
+
+        </div>
+      </mat-card-content>
+      <!-- / FORM -->
+
+      <!-- ACTIONS -->
+      <mat-card-actions align="end">
+        <mat-spinner *ngIf="loading" color="warn" class="mr-6" [diameter]="30"></mat-spinner>
+        <button mat-raised-button type="submit" color="primary" (click)="onSubmit()"
+          [disabled]="loading || usersFormGroup.invalid">
+          <span class="ml-2">{{ !id ? 'Add New User' : 'Edit User' }}</span>
+        </button>
+      </mat-card-actions>
+      <!-- / ACTIONS -->
+    </mat-card>
+  </form>
+  <!-- / USER INFORMATION -->
+
+</div>
+<!-- / BODY -->

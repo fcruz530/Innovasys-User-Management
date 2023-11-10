@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+  <div class="icon-container grid place-items-center">
+    <mat-icon class="icon-display" [color]='iconColor'>
+      <span *ngIf='data.icon === "success"'>check</span>
+      <span *ngIf='data.icon === "error"'>close</span>
+      <span *ngIf='data.icon === "warning"'>warning_amber</span>
+    </mat-icon>
+  </div>
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-center"> {{  data.title  }} </h1>
+    <span class="text-center" *ngIf='data.text'> {{  data.text  }} </span>
+  </div>
+</div>
+<div mat-dialog-actions align="center">
+  <div class="flex">
+    <button *ngIf='data.showCancelButton' mat-raised-button [color]='data.cancelButtonColor' [mat-dialog-close]='false'>
+      {{  data.cancelButtonText  }}
+    </button>
+
+    <div class="mx-2">
+
+    <button *ngIf='data.showConfirmButton' mat-raised-button [color]='data.confirmButtonColor' [mat-dialog-close]='true'>
+      {{  data.confirmButtonText  }}
+    </button>
+  </div>
+</div>

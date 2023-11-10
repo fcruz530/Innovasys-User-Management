@@ -1,0 +1,46 @@
+/* Custom default styles for angular material components */
+
+/* MAT TABLE */
+.mat-table-container {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+
+    mat-table {
+        background-color: unset;
+
+        /* MAT ROW */
+        mat-row {
+            background-color: white;
+            min-height: 70px;
+
+            &:nth-child(even) {
+                background-color: #f5f5f5;
+            }
+        }
+
+        /* MAT HEADER ROW */
+        mat-header-row {
+            mat-header-cell {
+                font-weight: 600 !important;
+                text-transform: uppercase;
+            }
+        }
+
+        /* MAT CELL */
+        mat-cell {
+            border-bottom-style: unset;
+            padding-bottom: 12px;
+            padding-top: 12px;
+        }
+
+        mat-cell, mat-header-cell {
+            min-width: 140px !important;
+        }
+    }
+}
+
+/* MAT PAGINATOR */
+mat-paginator {
+    background-color: unset !important;
+}
