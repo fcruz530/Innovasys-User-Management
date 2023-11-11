@@ -74,19 +74,19 @@ https://gorest.co.in/public/v2/users
 
 _For more information about this resources, please refer to their [Website](https://gorest.co.in/)_
 
-### Built With
+## Built With
 
 * [![Angular][Angular.io]][Angular-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Prerequisites
+## Prerequisites
 - Angular (Core Libraries) v16.2.12
 - Typescript >=4.9.3 <5.2.0
 - Angular CLI 16.2.9
 - Node ^16.14.0 || ^18.10.0
 
-### Installation
+## Installation
 
 1. Clone the repo
    ```sh
